@@ -2,7 +2,8 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "npx rollup -c",
+    "build": "npx rollup -c && cp index.template.html public/index.html",
+    "dist": "npm run build && ./dist.sh",
     "dev": "npx rollup -c -w",
     "start": "npx serve -n -l 5000 public"
   },
