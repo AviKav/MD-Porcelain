@@ -1,1 +1,4 @@
-export host_base=https://example.com/foo
+#!/usr/bin/env bash
+
+#No trailing slash
+export host=https://example.com/foo
