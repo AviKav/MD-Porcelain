@@ -5,7 +5,7 @@
     "build": "npx rollup -c && cp index.template.html public/index.html",
     "dist": "npm run build && ./dist.sh",
     "dev": "npx rollup -c -w",
-    "start": "npx serve -n -l 5000 public"
+    "start": "npx serve -C -n -l 5000 public"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^16.0.0",
