@@ -16,7 +16,7 @@ or begin
 end
 
 function prop
-    echo \"$argv[1]:\" \"$argv[2]\",
+    echo \"$argv[1]\": \"$argv[2]\",
 end
 
 set generated (begin \
@@ -31,7 +31,7 @@ set generated (begin \
 
         echo \"(echo -n $file | sed 's!./public!!')'": {'
         begin
-            prop sri sha256-{$hash}
+            prop sri sha256-(echo -n $hash | xxd -r -p | base64)
             prop web {$host}/assets/{$hash}/(basename $file)
         end
         echo '},'
