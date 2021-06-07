@@ -7,7 +7,7 @@ set short_hash (git rev-parse --short HEAD)
 set asset_path intermediate/worktree/content-addressed-assets
 
 git worktree list --porcelain \
-| grep -A 2 'worktree 'zi(pwd)/{$asset_path} \
+| grep -A 2 'worktree '(pwd)/{$asset_path} \
 | grep 'branch refs/heads/'(basename $asset_path) >/dev/null;
 and git worktree repair $asset_path
 or begin
