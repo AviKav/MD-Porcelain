@@ -1,4 +1,2 @@
-#!/usr/bin/env bash
-
 #No trailing slash
 export host=https://example.com/foo
